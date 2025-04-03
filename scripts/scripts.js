@@ -107,9 +107,9 @@ function quizInit() {
     console.log(`Initialize game state - Question: ${currentQuestionIndex}, Score: ${score}, Time Left: ${timeLeft}`);
 
     // UI updates *will need to call updateProgressBar()
-    // scoreElement.texContent = `Score: ${score}`;
-    // updateProgressBar();
-    // console.log("Updated score and progress bar");
+    scoreDisplay.texContent = `Score: ${score}`;
+    updateProgressBar();
+    console.log("Updated score and progress bar");
 
     // Screens
     welcomeScreen.classList.remove('active');
