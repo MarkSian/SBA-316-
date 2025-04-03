@@ -145,11 +145,14 @@ header {
 .correct {
     background-color: green ;
     color: white ;
+    font-weight: 700;
 }
 
 .incorrect {
     background-color: red ;
     color: white ;
+    font-weight: 700;
+
 }
 
 /* Result Screen Styles */

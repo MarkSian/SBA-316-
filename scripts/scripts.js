@@ -175,9 +175,9 @@ function loadQuestion() {
 
 // check answers
 function checkAnswer() {
-    clearInterval(timer);
+    clearInterval(timer); // Stop the timer
 
-    const selectedOption = document.querySelector('input[name="option"]:checked');
+    const selectedOption = document.querySelector('input[name="answer"]:checked');
     if (!selectedOption) return;
 
     const selectedAnswer = parseInt(selectedOption.value);
@@ -269,5 +269,7 @@ categorySelect.addEventListener('change', () => {
 
 nextButton.addEventListener('click', () => {
     checkAnswer(); //calls checkAnswer function to check if the answer is correct
-    setTimeout(nextQuestion, 1500); //1500ms to show answer before moving to next question
+    setTimeout(() => {
+        nextQuestion();
+    }, 1500); //1500ms to show answer before moving to next question
 });
