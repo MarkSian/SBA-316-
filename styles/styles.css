@@ -38,3 +38,16 @@ h1, h2 {
     text-shadow: 1px 1px 2px #2A2A2A;
     margin-bottom: 1.2rem;
 }
+
+p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2A2A2A;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
