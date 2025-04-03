@@ -67,3 +67,6 @@ const progressBar = document.getElementById("progress");
 const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const nextButton = document.getElementById("next-button");
+const finalScore = document.getElementById("final-score");
+const resultMessage = document.getElementById("result-message");
+const restartButton = document.getElementById("restart-button");
