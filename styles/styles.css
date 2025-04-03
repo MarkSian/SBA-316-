@@ -28,3 +28,13 @@ body {
     padding: 2rem;
     display: none
 }
+
+.screen.active {
+    display: block;
+}
+h1, h2 {
+    color: #FE4F2D;   
+    text-align: center;
+    text-shadow: 1px 1px 2px #2A2A2A;
+    margin-bottom: 1.2rem;
+}
