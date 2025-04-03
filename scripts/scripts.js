@@ -80,3 +80,18 @@ let questions = [];
 let currentQuestionIndex = 0;
 let timeLeft = 60; // 60 seconds for the quiz
 let timer; // timer variable without initial value. betweeen questions, we reset the timer
+
+// quiz initialization
+function quizInit() {
+
+}
+
+// quiz question loading
+function loadQuestion() {
+
+}
+
+// check answers
+function checkAnswer() {
+
+}
