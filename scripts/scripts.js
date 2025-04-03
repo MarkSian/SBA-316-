@@ -157,7 +157,7 @@ function loadQuestion() {
 
     // Display Options
     currentQuestion.options.forEach((option, index) => {
-        const optionElement = optionTemplate.content.cloneNode(true);
+        const optionElement = optionTemplate.content.cloneNode(true); // meets requirements for cloning a template
         const opttionRadio = optionElement.querySelector('.option-radio');
         const optionLabel = optionElement.querySelector('.option-label');
 
