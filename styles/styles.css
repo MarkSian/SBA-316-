@@ -76,3 +76,57 @@ button {
 button:hover {
     color: #AD8B73;
 }
+
+/* Quiz Screen Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #2A2A2A;
+}
+
+/* #progress-bar { 
+}
+
+#progress { 
+} */
+
+#question-container {
+    margin-bottom: 1.5rem;
+}
+
+#question-text {
+    color: #2A2A2A;
+}
+#options-list {
+    list-style:none;
+}
+
+/* .option {
+
+}
+
+.option-radio {
+
+}
+
+.option-label {
+
+} */
+
+/* Result Screen Styles */
+#results-screen {
+    text-align: center;
+}
+
+#final-score {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+#performance-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
