@@ -85,12 +85,22 @@ const questionBank = {
 
 // quiz initialization
 function quizInit() {
+    console.log("---Quiz Initialized---");
+
+    // Player Info and Category Selection
     playerName = playerNameInput.value;
     selectedCategory = categorySelect.value;
     console.log(`Player: ${playerName}, Category: ${selectedCategory}`);
 
+    // Display Player info and Category Selection
+    playerInfo.textContent = `Player: ${playerName} | Category: ${categorySelect.options[categorySelect.selectedIndex].text}`;
+    console.log("Updated player info display");
 
-}
+    // get questions from selected category
+    questions = [...questionBank[selectedCategory]];
+    console.log(`Loaded ${questions.length} questions:`, questions);
+};
+
 
 // quiz question loading
 function loadQuestion() {
