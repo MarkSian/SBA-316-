@@ -70,3 +70,4 @@ const nextButton = document.getElementById("next-button");
 const finalScore = document.getElementById("final-score");
 const resultMessage = document.getElementById("result-message");
 const restartButton = document.getElementById("restart-button");
+const optionTemplate = document.getElementById("option-template");

@@ -53,7 +53,14 @@
             <div id="result-message"></div>
             <button id="restart-button">Play Again</button>
         </div>
-
+        <!-- Template tag does not render until the script inserts them -->
+        <!-- template for answers -->
+        <template id="option-template">
+            <li class="option">
+                <input type="radio" name="answer" id="option-1" class="option-radio">
+                <label for="option-1" class="option-label"></label>
+            </li>
+        </template>
     </div>
 
 
