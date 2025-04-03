@@ -143,14 +143,14 @@ header {
 
 /* correct and incorrect styles */
 .correct {
-    background-color: green ;
-    color: white ;
+    background-color: green !important ; 
+    color: white !important;
     font-weight: 700;
 }
 
 .incorrect {
-    background-color: red ;
-    color: white ;
+    background-color: red !important ;
+    color: white !important;
     font-weight: 700;
 
 }

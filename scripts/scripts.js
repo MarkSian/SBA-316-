@@ -193,6 +193,8 @@ function checkAnswer() {
     });
 
     if (selectedAnswer === correctAnswer) {
+        const selectedLabel = selectedOption.nextElementSibling;
+        selectedLabel.classList.add('correct')
         score += timeLeft; // use the time left as a score 
         scoreDisplay.textContent = `Score: ${score}`;
     }
