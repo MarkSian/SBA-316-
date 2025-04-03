@@ -63,3 +63,7 @@ const playerNameInput = document.getElementById("player-name");
 const playerInfo = document.getElementById("player-info");
 const timerDisplay = document.getElementById("timer");
 const scoreDisplay = document.getElementById("score");
+const progressBar = document.getElementById("progress");
+const questionText = document.getElementById("question-text");
+const optionsList = document.getElementById("options-list");
+const nextButton = document.getElementById("next-button");
