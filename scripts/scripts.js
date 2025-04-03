@@ -71,3 +71,12 @@ const finalScore = document.getElementById("final-score");
 const resultMessage = document.getElementById("result-message");
 const restartButton = document.getElementById("restart-button");
 const optionTemplate = document.getElementById("option-template");
+
+// Variables
+let score = 0;
+let playerName = '';
+let selectedCategory = '';
+let questions = [];
+let currentQuestionIndex = 0;
+let timeLeft = 60; // 60 seconds for the quiz
+let timer; // timer variable without initial value. betweeen questions, we reset the timer
