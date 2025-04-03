@@ -99,6 +99,15 @@ function quizInit() {
     // get questions from selected category
     questions = [...questionBank[selectedCategory]];
     console.log(`Loaded ${questions.length} questions:`, questions);
+
+    // initial game state
+    currentQuestionIndex = 0;
+    score = 0;
+    timeLeft = 60; // timer for the quiz, will timeout after 60 seconds
+    console.log(`Initialize game state - Question: ${currentQuestionIndex}, Score: ${score}, Time Left: ${timeLeft}`);
+
+    // UI updates *will need to call updateProgressBar() 
+
 };
 
 
@@ -111,6 +120,16 @@ function loadQuestion() {
 
 // check answers
 function checkAnswer() {
+
+}
+
+// next question *advances to the next question or show results
+function nextQuestion() {
+
+}
+
+// update progress bar * progress bar width changes based on current questions
+function updateProgressBar() {
 
 }
 
