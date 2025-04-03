@@ -85,6 +85,9 @@ const questionBank = {
 
 // quiz initialization
 function quizInit() {
+    playerName = playerNameInput.value;
+    selectedCategory = categorySelect.value;
+    console.log(`Player: ${playerName}, Category: ${selectedCategory}`);
 
 
 }
@@ -100,3 +103,9 @@ function loadQuestion() {
 function checkAnswer() {
 
 }
+
+// event listeners
+playerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    quizInit();
+});
