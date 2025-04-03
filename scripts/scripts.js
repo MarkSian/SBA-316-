@@ -13,6 +13,7 @@ const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const nextButton = document.getElementById("next-button");
 const finalScore = document.getElementById("final-score");
+const finalPercentage = document.getElementById("final-percentage");
 const performanceMessage = document.getElementById("result-message");
 const resultMessage = document.getElementById("result-message");
 const restartButton = document.getElementById("restart-button");
@@ -250,8 +251,10 @@ function showResults() {
     switchScreen(quizScreen, resultScreen); // Switch to result screen
 
     finalScore.textContent = `Final Score: ${score}`;
-    const maxScore = questions.length * 60
+    const maxScore = questions.length * 60 // max score is 60 seconds for each question 
     const percentage = (score / maxScore) * 100;
+    finalPercentage.textContent = `Percentage: ${percentage.toFixed(2)}%`;
+
 
     if (percentage >= 80) {
         performanceMessage.textContent = `Excellent work, ${playerName}! You're a real one.`;

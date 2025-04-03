@@ -1,4 +1,5 @@
 * {
+    font-family: 'Press Start 2P', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,12 +7,15 @@
 }
 
 body {
-   background-color: #FFFBE9;
+   background-color: #4A818D;
    display: flex;
    justify-content: center;
    align-items: center;
    min-height: 100vh;
-   color: #2A2A2A ;
+   color: #4A818D ;
+   font-size: 1.2rem;
+   font-weight: 600;
+   
 }
 
 .container {
@@ -20,8 +24,8 @@ body {
     margin: 2rem;
     border-radius: 20px;
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
-    background-color: #E3CAA5;
-    border: 5px solid #AD8B73;
+    background-color: #EDF6E9;
+    border: 5px solid #9D7AA4;
 }
 
 .screen {
@@ -34,7 +38,7 @@ body {
 }
 
 h1, h2 {
-    color: #2A2A2A;   
+    color: #4A818D;   
     text-align: center;
     text-shadow: 1px 1px 2px #2A2A2A;
     margin-bottom: 1.2rem;
@@ -43,7 +47,9 @@ h1, h2 {
 p {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #2A2A2A;
+    color: #4A818D;
+    font-size: 1.2rem;
+
 }
 
 form {
@@ -54,7 +60,7 @@ form {
 }
 
 input, select, button {
-    padding: 0.5 rem 1rem;
+    padding: 0.5rem 1rem;
     border: 2px solid #2A2A2A;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -71,11 +77,14 @@ button {
     cursor: pointer;
     border: none;
     transition: all 0.3s;
+    background-color: #71CAC8;
 
 }
 
 button:hover {
-    color: #AD8B73;
+    color: #EDF6E9;
+    background-color: #4A818D;
+    border: 3px solid #9D7AA4;
 }
 
 /* Quiz Screen Styles */
@@ -89,7 +98,7 @@ header {
 
 #progress-bar {
     height: 10px;
-    background-color: red;
+    background-color: #71CAC8;
     border-radius: 5px;
     margin-bottom: 2rem;
     overflow: hidden;
@@ -98,7 +107,7 @@ header {
 #progress {
     height: 100%;
     width: 0%;
-    background-color: yellow;
+    background-color: #9D7AA4;
     transition: width 0.3s;
 }
 
@@ -107,7 +116,7 @@ header {
 }
 
 #question-text {
-    color: #2A2A2A;
+    color: #4A818D;
 }
 #options-list {
     list-style:none;
@@ -133,24 +142,24 @@ header {
 
 .option-label:hover {
     background-color: #e9ecef;
-    border-left: 4px solid blue;
+    border-left: 4px solid #4A818D;
 }
 
 .option-radio:checked + .option-label {
     background-color: #e9ecef;
     color: #2A2A2A;
-    border-left: 4px solid blue;
+    border-left: 4px solid #9D7AA4;
 }
 
 /* correct and incorrect styles */
 .correct {
-    background-color: green !important ; 
+    background-color: #5ca904 !important ; 
     color: white !important;
     font-weight: 700;
 }
 
 .incorrect {
-    background-color: red !important ;
+    background-color: #ff2a04 !important ;
     color: white !important;
     font-weight: 700;
 
@@ -165,12 +174,19 @@ header {
     font-size: 25px;
     font-weight: 600;
     margin: 1.5rem 0;
-    text-shadow: 1px 1px 2px #2A2A2A;
+    
+}
+
+#final-percentage {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    
 }
 
 #result-message {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px #2A2A2A;
+    
 }
