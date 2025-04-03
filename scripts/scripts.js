@@ -126,6 +126,24 @@ function quizInit() {
 
 // quiz question loading
 function loadQuestion() {
+    // timer
+    //reset timer
+    clearInterval(timer);
+    clearInterval(timer);
+    timeLeft = 60;
+    timerDisplay.textContent = `Time: ${timeLeft}s`;
+
+    // Begin Timer
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = `Time: ${timeLeft}s`;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            handleTimeOut();
+        }
+    }, 1000) // 1 sec interval
+    console.log("Timer started");
     // Display Question
     const currentQuestion = questions[currentQuestionIndex];
     questionText.textContent = currentQuestion.question;
