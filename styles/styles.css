@@ -32,6 +32,7 @@ body {
 .screen.active {
     display: block;
 }
+
 h1, h2 {
     color: #2A2A2A;   
     text-align: center;

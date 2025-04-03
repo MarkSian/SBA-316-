@@ -82,7 +82,12 @@ const questionBank = {
     ]
 };
 
-
+// function to switch screeens
+// ensure the active class is added to the target screen and removed from the current screen
+function switchScreen(fromScreen, toScreen) {
+    fromScreen.classList.remove('active'); // Hide the current screen
+    toScreen.classList.add('active'); // Show the target screen
+}
 
 // quiz initialization
 function quizInit() {
@@ -113,9 +118,7 @@ function quizInit() {
     console.log("Updated score and progress bar");
 
     // Screens
-    welcomeScreen.classList.remove('active');
-    quizScreen.classList.add('active');
-    console.log("Switched to quiz screen");
+    switchScreen(welcomeScreen, quizScreen); // Switch to quiz screen
 
     // Load Question
     loadQuestion();
@@ -243,10 +246,10 @@ function updateProgressBar() {
 
 // show results * show the results screen with final score and message
 function showResults() {
-    quizScreen.classList.remove('active');
-    resultScreen.classList.add('active');
-    finalScore.textContent = `Final Score: ${score}`;
+    // swith screens
+    switchScreen(quizScreen, resultScreen); // Switch to result screen
 
+    finalScore.textContent = `Final Score: ${score}`;
     const maxScore = questions.length * 60
     const percentage = (score / maxScore) * 100;
 
@@ -262,8 +265,8 @@ function showResults() {
 
 // restart quiz * reset the quiz and go back to welcome screen
 function restartQuiz() {
-    resultScreen.classList.remove('active');
-    welcomeScreen.classList.add('active');
+    // switch screens
+    switchScreen(resultScreen, welcomeScreen); // Switch to welcome screen
     playerForm.reset();
     score = 0;
     timeLeft = 60;
