@@ -106,13 +106,25 @@ function quizInit() {
     timeLeft = 60; // timer for the quiz, will timeout after 60 seconds
     console.log(`Initialize game state - Question: ${currentQuestionIndex}, Score: ${score}, Time Left: ${timeLeft}`);
 
-    // UI updates *will need to call updateProgressBar() 
+    // UI updates *will need to call updateProgressBar()
+    // scoreElement.texContent = `Score: ${score}`;
+    // updateProgressBar();
+    // console.log("Updated score and progress bar");
+
+    // Load Question
+    loadQuestion();
+    console.log("Loaded first question");
+
 
 };
 
 
 // quiz question loading
 function loadQuestion() {
+    // Display Question
+    const currentQuestion = questions[currentQuestionIndex];
+    questionText.textContent = currentQuestion.question;
+    optionsList.innerHTML = ''; // reset options list
 
 
 
@@ -130,6 +142,9 @@ function nextQuestion() {
 
 // update progress bar * progress bar width changes based on current questions
 function updateProgressBar() {
+    const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+    progressBar.style.width = `${progress}%`;
+    console.log(`Progress Bar Updated: ${progress}%`);
 
 }
 
