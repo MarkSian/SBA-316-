@@ -240,6 +240,32 @@ function updateProgressBar() {
 
 }
 
+// show results * show the results screen with final score and message
+function showResults() {
+    quizScreen.classList.remove('active');
+    resultScreen.classList.add('active');
+    finalScore.textContent = `Final Score: ${score}`;
+
+    const maxScore = questions.length * 60
+    const percentage = (score / maxScore) * 100;
+
+    if (percentage >= 80) {
+        performanceMessage.textContent = `Excellent work, ${playerName}! You're a real one.`;
+    } else if (percentage >= 50) {
+        performanceMessage.textContent = `Good job, ${playerName}! You know your stuff.`;
+    } else {
+        performanceMessage.textContent = `Nice try, ${playerName}! Time to head to the wiki.`;
+    }
+}
+
+
+// restart quiz * reset the quiz and go back to welcome screen
+function restartQuiz() {
+    resultsScreen.classList.remove('active');
+    welcomeScreen.classList.add('active');
+    playerForm.requestFullscreen();
+}
+
 // event listeners
 playerForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -275,3 +301,5 @@ nextButton.addEventListener('click', () => {
         nextQuestion();
     }, 1500); //1500ms to show answer before moving to next question
 });
+
+restartButton.addEventListener('click', restartQuiz);
