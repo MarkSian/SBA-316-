@@ -1,4 +1,5 @@
 // DOM Elements
+// get elements using getElementById
 const welcomeScreen = document.getElementById("welcome-screen");
 const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
@@ -213,7 +214,9 @@ function checkAnswer() {
 // handle time out when timer expires
 function handleTimeOut() {
     const correctAnswer = questions[currentQuestionIndex].answer;
+    // use querySelectorAll to get all option labels
     const optionLabels = document.querySelectorAll('.option-label');
+    // add the correct class to the option label containing the correct answer
     optionLabels[correctAnswer].classList.add('correct');
 
     document.querySelectorAll('.option-radio').forEach(radio => {
@@ -279,13 +282,13 @@ function restartQuiz() {
 // event listeners
 playerForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    // prevent submitting a form with empty fields
     if (playerNameInput.value.trim().length < 2) {
         playerNameInput.classList.add('error');
         playerNameInput.setAttribute('placeholder', 'Name must be at least 2 characters');
         return;
     }
-
+    // prevent submitting a form with no category selected
     if (!categorySelect.value) {
         categorySelect.classList.add('error');
         return;
@@ -293,23 +296,25 @@ playerForm.addEventListener("submit", (e) => {
 
     quizInit();
 });
-
+// event listeners that remove error when the user interacts with the input fields
 playerNameInput.addEventListener('input', () => {
     if (playerNameInput.value.trim().length >= 2) {
         playerNameInput.classList.remove('error');
         playerNameInput.setAttribute('placeholder', 'Enter your name');
     }
 });
-
+// event listeners that remove error when the user interacts with the category select field
 categorySelect.addEventListener('change', () => {
     categorySelect.classList.remove('error');
 });
 
+// event listeners for next button and restart button
 nextButton.addEventListener('click', () => {
     checkAnswer(); //calls checkAnswer function to check if the answer is correct
     setTimeout(() => {
         nextQuestion();
-    }, 1500); //1500ms to show answer before moving to next question
+    }, 1500); //1500ms delay to show answer before moving to next question
 });
 
+// event listeners for restart button and go back to the welcome screen
 restartButton.addEventListener('click', restartQuiz);
