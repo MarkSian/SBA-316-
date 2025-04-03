@@ -11,6 +11,7 @@ body {
    justify-content: center;
    align-items: center;
    min-height: 100vh;
+   color: #2A2A2A ;
 }
 
 .container {
@@ -20,4 +21,10 @@ body {
     border-radius: 20px;
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
     background-color: #57B4BA;
+    border: 5px solid #FE4F2D
+}
+
+.screen {
+    padding: 2rem;
+    display: none
 }
