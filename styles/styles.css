@@ -23,7 +23,7 @@ body {
     background-color: #E3CAA5;
     border: 5px solid #AD8B73;
 }
-/* 
+
 .screen {
     padding: 2rem;
     display: none;
@@ -31,7 +31,7 @@ body {
 
 .screen.active {
     display: block;
-} */
+}
 h1, h2 {
     color: #2A2A2A;   
     text-align: center;
