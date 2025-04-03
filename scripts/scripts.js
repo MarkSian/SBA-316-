@@ -178,6 +178,11 @@ function checkAnswer() {
 
 }
 
+// handle time out when timer expires
+function handleTimeOut() {
+}
+
+
 // next question *advances to the next question or show results
 function nextQuestion() {
 
@@ -194,5 +199,12 @@ function updateProgressBar() {
 // event listeners
 playerForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    if (playerNameInput.value.trim().length < 2) {
+        playerNameInput.classList.add('error');
+        playerNameInput.setAttribute('placeholder', 'Name must be at least 2 characters');
+        return;
+    }
+
     quizInit();
 });
