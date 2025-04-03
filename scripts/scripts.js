@@ -52,3 +52,6 @@ const questionBank = {
         }
     ]
 };
+
+// DOM Elements
+const welcomeScreen = document.getElementById("welcome-screen");

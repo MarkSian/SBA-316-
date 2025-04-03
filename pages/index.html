@@ -12,14 +12,29 @@
 <body>
     <div class="container">
         <!-- welcome screen" -->
-        <!-- class="active-screen" -->
-        <div class="welcome-screen">
+        <div class="welcome-screen" class="active-screen">
             <!-- think of a better name -->
             <h1>PokeQuiz</h1>
             <p>Prove you pokemon knowledge with a quick quiz!</p>
+            <form class="player-form">
+                <input type="text" id="player-name" placeholder="Enter your name" required minlength="2" maxlength="15">
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="pokemonTrivia">Pokemon Trivia</option>
+                    <option value="pokemonMechanics">Competitive Mechanics</option>
+                    <option value="pokemonHistory">Pokemon History</option>
+                </select>
+                <button type="submit">Start Quiz</button>
+            </form>
         </div>
+        <!-- quiz screen" -->
+        <div class="quiz-screen" class="screen"></div>
+        <!-- result screen" -->
+        <div class="results-screen" class="screen"></div>
 
     </div>
+
 
     <script src="../scripts/scripts.js"></script>
 </body>
