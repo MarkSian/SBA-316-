@@ -161,12 +161,15 @@ header {
 }
 
 #final-score {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 600;
     margin: 1.5rem 0;
+    text-shadow: 1px 1px 2px #2A2A2A;
 }
 
-#performance-message {
-    font-size: 1.2rem;
+#result-message {
+    font-size: 25px;
+    font-weight: 600;
     margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px #2A2A2A;
 }
