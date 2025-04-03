@@ -13,6 +13,7 @@ const questionText = document.getElementById("question-text");
 const optionsList = document.getElementById("options-list");
 const nextButton = document.getElementById("next-button");
 const finalScore = document.getElementById("final-score");
+const performanceMessage = document.getElementById("result-message");
 const resultMessage = document.getElementById("result-message");
 const restartButton = document.getElementById("restart-button");
 const optionTemplate = document.getElementById("option-template");
@@ -261,9 +262,12 @@ function showResults() {
 
 // restart quiz * reset the quiz and go back to welcome screen
 function restartQuiz() {
-    resultsScreen.classList.remove('active');
+    resultScreen.classList.remove('active');
     welcomeScreen.classList.add('active');
     playerForm.requestFullscreen();
+    score = 0;
+    timeLeft = 60;
+    console.log("Quiz Restarted");
 }
 
 // event listeners
