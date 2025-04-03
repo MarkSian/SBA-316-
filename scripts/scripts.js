@@ -55,3 +55,5 @@ const questionBank = {
 
 // DOM Elements
 const welcomeScreen = document.getElementById("welcome-screen");
+const quizScreen = document.getElementById("quiz-screen");
+const resultScreen = document.getElementById("result-screen");
