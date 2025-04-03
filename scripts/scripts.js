@@ -111,9 +111,14 @@ function quizInit() {
     // updateProgressBar();
     // console.log("Updated score and progress bar");
 
+    // Screens
+    welcomeScreen.classList.remove('active');
+    quizScreen.classList.add('active');
+    console.log("Switched to quiz screen");
+
     // Load Question
     loadQuestion();
-    console.log("Loaded first question");
+
 
 
 };
@@ -127,6 +132,26 @@ function loadQuestion() {
     optionsList.innerHTML = ''; // reset options list
 
 
+    // Display Options
+    currentQuestion.options.forEach((option, index) => {
+        const optionElement = optionTemplate.content.cloneNode(true);
+        const opttionRadio = optionElement.querySelector('.option-radio');
+        const optionLabel = optionElement.querySelector('.option-label');
+
+        // Options
+        opttionRadio.id = `option-${index}`;
+        opttionRadio.value = index;
+        optionLabel.htmlFor = `option-${index}`;
+        optionLabel.textContent = option;
+
+        // enable selection
+        opttionRadio.addEventListener('change', () => {
+            nextButton.disabled = false; // enable next button when an option is clicked and selected
+        });
+        optionsList.appendChild(optionElement);
+    });
+
+    nextButton.disabled = true; // by default, disable the next button
 
 }
 
