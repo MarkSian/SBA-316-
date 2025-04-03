@@ -86,11 +86,20 @@ header {
     border-bottom: 2px solid #2A2A2A;
 }
 
-/* #progress-bar { 
+#progress-bar {
+    height: 10px;
+    background-color: red;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    overflow: hidden;
 }
 
-#progress { 
-} */
+#progress {
+    height: 100%;
+    width: 0%;
+    background-color: yellow;
+    transition: width 0.3s;
+}
 
 #question-container {
     margin-bottom: 1.5rem;
@@ -103,17 +112,23 @@ header {
     list-style:none;
 }
 
-/* .option {
-
+.option {
+    margin-bottom: 0.8rem;
 }
 
 .option-radio {
-
+    display: none;
 }
 
 .option-label {
-
-} */
+    display: block;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-left: 4px solid transparent;
+}
 
 /* Result Screen Styles */
 #results-screen {

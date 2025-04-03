@@ -1,3 +1,31 @@
+// DOM Elements
+const welcomeScreen = document.getElementById("welcome-screen");
+const quizScreen = document.getElementById("quiz-screen");
+const resultScreen = document.getElementById("result-screen");
+const playerForm = document.getElementById("player-form");
+const categorySelect = document.getElementById("category");
+const playerNameInput = document.getElementById("player-name");
+const playerInfo = document.getElementById("player-info");
+const timerDisplay = document.getElementById("timer");
+const scoreDisplay = document.getElementById("score");
+const progressBar = document.getElementById("progress");
+const questionText = document.getElementById("question-text");
+const optionsList = document.getElementById("options-list");
+const nextButton = document.getElementById("next-button");
+const finalScore = document.getElementById("final-score");
+const resultMessage = document.getElementById("result-message");
+const restartButton = document.getElementById("restart-button");
+const optionTemplate = document.getElementById("option-template");
+
+// Variables
+let score = 0;
+let playerName = '';
+let selectedCategory = '';
+let questions = [];
+let currentQuestionIndex = 0;
+let timeLeft = 60; // 60 seconds for the quiz
+let timer; // timer variable without initial value. betweeen questions, we reset the timer
+
 // Question List
 const questionBank = {
     pokemonTrivia: [
@@ -53,41 +81,18 @@ const questionBank = {
     ]
 };
 
-// DOM Elements
-const welcomeScreen = document.getElementById("welcome-screen");
-const quizScreen = document.getElementById("quiz-screen");
-const resultScreen = document.getElementById("result-screen");
-const playerForm = document.getElementById("player-form");
-const categorySelect = document.getElementById("category");
-const playerNameInput = document.getElementById("player-name");
-const playerInfo = document.getElementById("player-info");
-const timerDisplay = document.getElementById("timer");
-const scoreDisplay = document.getElementById("score");
-const progressBar = document.getElementById("progress");
-const questionText = document.getElementById("question-text");
-const optionsList = document.getElementById("options-list");
-const nextButton = document.getElementById("next-button");
-const finalScore = document.getElementById("final-score");
-const resultMessage = document.getElementById("result-message");
-const restartButton = document.getElementById("restart-button");
-const optionTemplate = document.getElementById("option-template");
 
-// Variables
-let score = 0;
-let playerName = '';
-let selectedCategory = '';
-let questions = [];
-let currentQuestionIndex = 0;
-let timeLeft = 60; // 60 seconds for the quiz
-let timer; // timer variable without initial value. betweeen questions, we reset the timer
 
 // quiz initialization
 function quizInit() {
+
 
 }
 
 // quiz question loading
 function loadQuestion() {
+
+
 
 }
 
