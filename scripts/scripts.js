@@ -206,5 +206,26 @@ playerForm.addEventListener("submit", (e) => {
         return;
     }
 
+    if (!categorySelect.value) {
+        categorySelect.classList.add('error');
+        return;
+    }
+
     quizInit();
+});
+
+playerNameInput.addEventListener('input', () => {
+    if (playerNameInput.value.trim().length >= 2) {
+        playerNameInput.classList.remove('error');
+        playerNameInput.setAttribute('placeholder', 'Enter your name');
+    }
+});
+
+categorySelect.addEventListener('change', () => {
+    categorySelect.classList.remove('error');
+});
+
+nextButton.addEventListener('click', () => {
+    checkAnswer(); //calls checkAnswer function to check if the answer is correct
+    setTimeout(nextQuestion, 1500); //1500ms to show answer before moving to next question
 });
