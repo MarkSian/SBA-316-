@@ -175,16 +175,58 @@ function loadQuestion() {
 
 // check answers
 function checkAnswer() {
+    clearInterval(timer);
+
+    const selectedOption = document.querySelector('input[name="option"]:checked');
+    if (!selectedOption) return;
+
+    const selectedAnswer = parseInt(selectedOption.value);
+    const correctAnswer = questions[currentQuestionIndex].answer;
+
+    const optionLabels = document.querySelectorAll('.option-label');
+    optionLabels.forEach((label, index) => {
+        if (index === correctAnswer) {
+            label.classList.add('correct'); // highlight correct answer   
+        } else if (index === selectedAnswer && index !== correctAnswer) {
+            label.classList.add('incorrect'); // highlight incorrect answer
+        }
+    });
+
+    if (selectedAnswer === correctAnswer) {
+        score += timeLeft; // use the time left as a score 
+        scoreDisplay.textContent = `Score: ${score}`;
+    }
+
+    document.querySelectorAll('.option-radio').forEach(radio => {
+        radio.disabled = true;
+    });
 
 }
 
 // handle time out when timer expires
 function handleTimeOut() {
+    const correctAnswer = questions[currentQuestionIndex].answer;
+    const optionLabels = document.querySelectorAll('.option-label');
+    optionLabels[correctAnswer].classList.add('correct');
+
+    document.querySelectorAll('.option-radio').forEach(radio => {
+        radio.disabled = true;
+    });
+
+    nextButton.disabled = false;
 }
 
 
 // next question *advances to the next question or show results
 function nextQuestion() {
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        updateProgressBar();
+        loadQuestion();
+    } else {
+        showResults(); // show results if no more questions left
+    }
 
 }
 

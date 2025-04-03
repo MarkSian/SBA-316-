@@ -130,6 +130,28 @@ header {
     border-left: 4px solid transparent;
 }
 
+.option-label:hover {
+    background-color: #e9ecef;
+    border-left: 4px solid blue;
+}
+
+.option-radio:checked + .option-label {
+    background-color: #e9ecef;
+    color: #2A2A2A;
+    border-left: 4px solid blue;
+}
+
+/* correct and incorrect styles */
+.correct {
+    background-color: green ;
+    color: white ;
+}
+
+.incorrect {
+    background-color: red ;
+    color: white ;
+}
+
 /* Result Screen Styles */
 #results-screen {
     text-align: center;
