@@ -264,7 +264,7 @@ function showResults() {
 function restartQuiz() {
     resultScreen.classList.remove('active');
     welcomeScreen.classList.add('active');
-    playerForm.requestFullscreen();
+    playerForm.reset();
     score = 0;
     timeLeft = 60;
     console.log("Quiz Restarted");
